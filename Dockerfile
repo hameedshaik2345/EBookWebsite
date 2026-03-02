@@ -13,5 +13,6 @@ COPY . /var/www/html/
 # (Note: On Render Free tier, user uploads in these folders will be lost when the server goes to sleep and wakes up again)
 RUN chmod -R 777 /var/www/html/covers /var/www/html/pdfs || true
 
-# Expose port 80 (Render detects this and routes traffic to it)
-EXPOSE 80
+# Use the PORT environment variable provided by Render, or default to 80
+ENV PORT=80
+CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && docker-php-entrypoint apache2-foreground
