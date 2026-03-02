@@ -1,0 +1,133 @@
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--dark-bg);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: transparent !important;
+    padding: 100px 0;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1,
+.hero-section p {
+    color: #000000 !important;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.hero-section h1 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+}
+
+/* Index Page Specific Styles */
+.index-page h1 {
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.index-page p {
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Featured Books */
+.featured-books .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-books .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-books .card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-books .card-text {
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.featured-books .btn {
+    margin-top: auto;
+} 
